@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1709061897502,
+      "tag": "0000_cynical_vindicator",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1710624139491,
+      "tag": "0001_clammy_nextwave",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1710629321423,
+      "tag": "0002_parallel_iron_man",
+      "breakpoints": true
+    }
+  ]
+}
