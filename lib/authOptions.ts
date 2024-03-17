@@ -1,5 +1,6 @@
+import { ERoles } from '@/Shared/types'
 import { env } from '@/env'
-import { createUser, getUser, updateUser } from '@/queries/users'
+import { createUser, getUser, updateUser } from '@/Shared/service/users'
 import { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 
@@ -30,13 +31,18 @@ export const authOptions: NextAuthOptions = {
             try {
                 const user = await getUser(profile.email)
                 const { email, name } = profile
+
                 if (!user) {
-                    const createdUser = await createUser({ id: '1', email, role: 'beatmaker' })
-                    console.log(createdUser, 'CREATE USER')
+                    const userId = String(Math.random())
+                    await createUser({
+                        id: userId,
+                        email,
+                        role: 'ADMIN',
+                        name
+                    })
                 } else {
-                    const newUser = { name: name, email: email, id: 'id2' }
-                    const updatedUser = await updateUser(newUser, user.id)
-                    console.log(updatedUser, 'UPDATED USER')
+                    const newUser = { name: name, email: email, role: ERoles.ADMIN }
+                    await updateUser(newUser, user.id)
                 }
             } catch (e) {
                 console.log(e, 'create user error')

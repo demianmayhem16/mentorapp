@@ -9,7 +9,5 @@ export const getUserSession = async () => {
         }
     })
 
-    console.log(authUserSession, 'AUTH SESSION')
-
     return authUserSession
 }
