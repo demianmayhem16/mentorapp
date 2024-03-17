@@ -10,7 +10,7 @@ import {
     boolean
 } from 'drizzle-orm/pg-core'
 
-export const users = pgTable('user', {
+export const users = pgTable('users', {
     id: text('id').notNull().primaryKey(),
     name: text('name'),
     email: text('email').notNull(),
@@ -18,7 +18,10 @@ export const users = pgTable('user', {
     role: text('beatmaker')
 })
 
-export const products = pgTable('product', {
+export type User = typeof users.$inferSelect // return type when queried
+export type NewUser = typeof users.$inferInsert // insert type
+
+export const products = pgTable('products', {
     id: text('id').notNull().primaryKey(),
     title: text('beat'),
     price: text('290').notNull()
