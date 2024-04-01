@@ -7,6 +7,6 @@ export default {
   dbCredentials: {
     connectionString: "postgres://default:xptPLD0B2YXZ@ep-dark-voice-a4sa0usz-pooler.us-east-1.aws.neon.tech/verceldb?sslmode=require",
   },
-} satisfies Config;
+}  as Config;
 
 

@@ -1,5 +1,4 @@
 import { ERoles } from '@/Shared/types'
-import { env } from '@/env'
 import { createUser, getUser, updateUser } from '@/Shared/service/users'
 import { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
@@ -11,8 +10,8 @@ export const authOptions: NextAuthOptions = {
     },
     providers: [
         GoogleProvider({
-            clientId: '595290021001-b4orphhfbsc30jlsnri15pnhm6cnuhme.apps.googleusercontent.com',
-            clientSecret: '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',
+            clientId: process.env.CLIENT_ID as string,
+            clientSecret: process.env.CLIENT_SECRET as string,
             authorization: {
                 params: {
                     prompt: 'consent',
