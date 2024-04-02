@@ -10,7 +10,7 @@ import {
 import { UserMenu } from '../ui/UserMenu'
 import { useSession } from 'next-auth/react'
 
-const Header = () => {
+const UserMenuWidget = () => {
     const { data: session } = useSession()
     return (
         <div>
@@ -31,4 +31,4 @@ const Header = () => {
     )
 }
 
-export { Header }
+export { UserMenuWidget }

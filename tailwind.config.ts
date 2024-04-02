@@ -1,4 +1,5 @@
 const withMT = require('@material-tailwind/react/utils/withMT')
+const colors = require('tailwindcss/colors')
 
 const config = withMT({
     darkMode: ['class'],
@@ -51,7 +52,8 @@ const config = withMT({
                 card: {
                     DEFAULT: 'hsl(var(--card))',
                     foreground: 'hsl(var(--card-foreground))'
-                }
+                },
+                ...colors
             },
             borderRadius: {
                 lg: 'var(--radius)',

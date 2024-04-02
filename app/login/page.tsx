@@ -1,23 +1,28 @@
 'use client'
+import { GoogleIcon } from '@/Shared/icons/social'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { signIn } from 'next-auth/react'
 
 export default function Login() {
     const loginWithGoogle = () =>
-        signIn('google', { callbackUrl: 'http://localhost:3000/onboarding' })
+        signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            <Card className="w-[350px] shadow-lg">
-                <CardHeader>
-                    <CardTitle>Nightcrawlers</CardTitle>
-                    <CardDescription>Create an account in one-click!</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <Button onClick={loginWithGoogle}> sign in with google </Button>
-                </CardContent>
-            </Card>
-        </div>
+    <div className='flex justify-center items-center h-screen'>
+      <Card className="w-full max-w-sm bg-zink-950 border-opacity-20 "> 
+        <CardHeader>
+            <CardTitle className="text-2xl">Login</CardTitle>
+            <CardDescription>
+             Login to your account faster!
+            </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-4">
+            <div className="grid gap-2">
+            <Button className='flex gap-4' onClick={loginWithGoogle} > <GoogleIcon/> sign in with google </Button>
+            </div>
+        </CardContent>
+     </Card>
+ </div>
     )
 }
