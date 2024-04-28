@@ -1,4 +1,4 @@
-import { TSessionUser } from '@/Shared/types'
+import { TSessionUser } from '@/Shared/types/types'
 import Image from 'next/image'
 
 const UserMenu = ({ name, image }: Partial<TSessionUser>) => {
@@ -8,7 +8,8 @@ const UserMenu = ({ name, image }: Partial<TSessionUser>) => {
              <Image 
               className='rounded-full' 
               src={image as string}
-              width={40} height={40}  
+              width={40} 
+              height={40}  
               alt="user img" />
         </div>
     )

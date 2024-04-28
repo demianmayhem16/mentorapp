@@ -36,6 +36,48 @@
       "when": 1711987107051,
       "tag": "0004_same_adam_destine",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1712177454592,
+      "tag": "0005_unusual_vin_gonzales",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1712177842391,
+      "tag": "0006_wandering_mad_thinker",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1712177889121,
+      "tag": "0007_first_master_chief",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1712178069816,
+      "tag": "0008_damp_edwin_jarvis",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1712344408360,
+      "tag": "0009_warm_cannonball",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1712346419532,
+      "tag": "0010_hard_norrin_radd",
+      "breakpoints": true
     }
   ]
 }

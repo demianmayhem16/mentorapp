@@ -1,4 +1,4 @@
-import { ERoles } from '@/Shared/types'
+import { ERoles } from '@/Shared/types/types'
 import { createUser, getUser, updateUser } from '@/Shared/service/users'
 import { NextAuthOptions } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'

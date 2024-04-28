@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { QueryProvider } from '@/lib/Providers/QueryProvider'
-
+import { Toaster } from "@/components/ui/sonner"
 import './globals.css'
 import { NextAuthProvider } from '@/lib/Providers/NextAuthProvider'
 import { CheckAuthProvider } from '@/lib/Providers/CheckAuthProvider'
@@ -30,6 +30,7 @@ export default function RootLayout({
                     </QueryProvider>
                     </CheckAuthProvider>
                 </NextAuthProvider>
+                <Toaster />
             </body>
         </html>
     )
